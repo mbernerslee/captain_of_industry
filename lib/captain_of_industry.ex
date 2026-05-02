@@ -131,16 +131,17 @@ defmodule CaptainOfIndustry do
 
   defp recipes do
     basic_recipes()
-    # |> Map.merge(assembly_1_recipes())
-    # |> Map.merge(farm_recipes())
+    |> Map.merge(assembly_1_recipes())
+    |> Map.merge(farm_recipes())
     |> Map.merge(maintenance_depo_recipes())
-    |> Map.merge(irrigated_farm_recipes())
+    # |> Map.merge(irrigated_farm_recipes())
     # |> Map.merge(assembly_2_recipes())
-    |> Map.merge(assembly_3_recipes())
-    |> Map.merge(glass_maker_recipes())
+    # |> Map.merge(assembly_3_recipes())
+    # |> Map.merge(glass_maker_recipes())
     |> Map.merge(blast_furnace_recipes())
-    |> Map.merge(mixer_recipes())
-    |> Map.merge(evaporation_pond_heated_recipes())
+
+    # |> Map.merge(mixer_recipes())
+    # |> Map.merge(evaporation_pond_heated_recipes())
   end
 
   defp assembly_1_recipes do
@@ -439,16 +440,16 @@ defmodule CaptainOfIndustry do
 
   defp maintenance_depo_recipes do
     %{
-      # "maintenance 1" => %{
-      #  building: "maintenance depo (basic)",
-      #  amount_produced_per_60: 220,
-      #  recipe: [{"mechanical parts", 12}, {"electronics", 6}]
-      # },
       "maintenance 1" => %{
-        building: "maintenance depo",
-        amount_produced_per_60: 480,
-        recipe: [{"mechanical parts", 24}, {"electronics", 12}]
+        building: "maintenance depo (basic)",
+        amount_produced_per_60: 220,
+        recipe: [{"mechanical parts", 12}, {"electronics", 6}]
       }
+      # "maintenance 1" => %{
+      #  building: "maintenance depo",
+      #  amount_produced_per_60: 480,
+      #  recipe: [{"mechanical parts", 24}, {"electronics", 12}]
+      # }
       # "maintenance 1" => %{
       #  building: "maintenance depo",
       #  amount_produced_per_60: 480,
